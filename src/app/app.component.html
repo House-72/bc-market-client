@@ -1,0 +1,10 @@
+<app-navigation></app-navigation>
+
+<div class="container">
+  <app-search-bar (search)="onSearch($event)"></app-search-bar>
+  <app-category (categorySelected)="onCategorySelected($event)"></app-category>
+  <app-stats-bar></app-stats-bar>
+  <app-item-overview [searchQuery]="searchQuery" [selectedCategory]="selectedCategory"></app-item-overview>
+</div>
+
+<router-outlet />

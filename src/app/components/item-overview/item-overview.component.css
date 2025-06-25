@@ -1,0 +1,150 @@
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background-color: #1a1a18;
+  border: 1px solid #6F9283;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.item-card:hover {
+  border-color: #e3d26f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.item-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.item-category {
+  font-size: 12px;
+  color: #ca895f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.item-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #6F9283;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.item-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.stat-text {
+  font-size: 12px;
+  color: #6F9283;
+}
+
+.price-up {
+  color: #6F9283;
+}
+
+.price-down {
+  color: #A15E49;
+}
+
+.price-neutral {
+  color: #e3d26f;
+}
+
+.mini-chart {
+  height: 40px;
+  background-color: #2D2D2A;
+  border-radius: 4px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mini-chart-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #A15E49, #6F9283);
+}
+
+.trend-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.trend-up {
+  background-color: rgba(111, 146, 131, 0.2);
+  color: #6F9283;
+}
+
+.trend-down {
+  background-color: rgba(161, 94, 73, 0.2);
+  color: #A15E49;
+}
+
+.trend-flat {
+  background-color: rgba(227, 210, 111, 0.2);
+  color: #e3d26f;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6F9283;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #ca895f;
+}
+
+@media (max-width: 768px) {
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+}

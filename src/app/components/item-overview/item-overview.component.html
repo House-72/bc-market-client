@@ -1,0 +1,43 @@
+<section class="items-grid">
+  <div *ngIf="items.length === 0" class="no-results">
+    No items found matching your search.
+  </div>
+
+  <div *ngFor="let item of items" class="item-card" (click)="viewChart(item.name)">
+    <div class="trend-indicator" [ngClass]="'trend-' + item.trend">
+      {{ item.trend === 'up' ? '↗' : item.trend === 'down' ? '↘' : '→' }}
+    </div>
+    <div class="item-header">
+      <div>
+        <div class="item-name">{{ item.name }}</div>
+        <div class="item-category">{{ item.category }}</div>
+      </div>
+      <div class="item-icon">{{ item.icon }}</div>
+    </div>
+    <div class="item-stats">
+      <div class="stat">
+        <div class="stat-number" [ngClass]="item.change > 0 ? 'price-up' : item.change < 0 ? 'price-down' : 'price-neutral'">
+          {{ item.currentPrice }} gold
+        </div>
+        <div class="stat-text">Current Price</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" [ngClass]="item.change > 0 ? 'price-up' : item.change < 0 ? 'price-down' : 'price-neutral'">
+          {{ item.change > 0 ? '+' : '' }}{{ item.change }}%
+        </div>
+        <div class="stat-text">24h Change</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{{ formatPrice(item.volume) }}</div>
+        <div class="stat-text">24h Volume</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{{ item.listings }}</div>
+        <div class="stat-text">Active Listings</div>
+      </div>
+    </div>
+    <div class="mini-chart">
+      <div class="mini-chart-line"></div>
+    </div>
+  </div>
+</section>

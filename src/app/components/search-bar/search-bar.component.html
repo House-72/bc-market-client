@@ -1,0 +1,11 @@
+<section class="search-section">
+  <div class="search-container">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search for items... (e.g. Dragon Sword, Health Potion)"
+      [(ngModel)]="searchQuery"
+      (input)="onSearch()">
+    <span class="search-icon">🔍</span>
+  </div>
+</section>
