@@ -4,11 +4,10 @@ import { GameItem } from '../../models/game-item.model';
 import { GameItemService } from '../../services/game-item.service';
 
 @Component({
-  selector: 'app-item-overview',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './item-overview.component.html',
-  styleUrl: './item-overview.component.css'
+    selector: 'app-item-overview',
+    imports: [CommonModule],
+    templateUrl: './item-overview.component.html',
+    styleUrl: './item-overview.component.css'
 })
 export class ItemOverviewComponent implements OnChanges {
   @Input() searchQuery: string = '';

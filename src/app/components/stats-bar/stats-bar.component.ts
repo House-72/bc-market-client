@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { GameItemService } from '../../services/game-item.service';
 
 @Component({
-  selector: 'app-stats-bar',
-  standalone: true,
-  imports: [],
-  templateUrl: './stats-bar.component.html',
-  styleUrl: './stats-bar.component.css'
+    selector: 'app-stats-bar',
+    imports: [],
+    templateUrl: './stats-bar.component.html',
+    styleUrl: './stats-bar.component.css'
 })
 export class StatsBarComponent implements OnInit {
   stats: {

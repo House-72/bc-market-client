@@ -7,18 +7,17 @@ import { StatsBarComponent } from './components/stats-bar/stats-bar.component';
 import { ItemOverviewComponent } from './components/item-overview/item-overview.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    NavigationComponent,
-    SearchBarComponent,
-    CategoryComponent,
-    StatsBarComponent,
-    ItemOverviewComponent
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        NavigationComponent,
+        SearchBarComponent,
+        CategoryComponent,
+        StatsBarComponent,
+        ItemOverviewComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'bc-market-client';
